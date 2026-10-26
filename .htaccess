@@ -1,0 +1,19 @@
+Options -Indexes
+DirectoryIndex index.php
+
+# Hide dotfiles, Composer files and the README from the web.
+<FilesMatch "^(\.|composer\.(json|lock)$|README\.md$)">
+    Require all denied
+</FilesMatch>
+RedirectMatch 404 "/vendor(/|$)"
+
+# Partials (_form.php, _table.php) are only included by other pages.
+<FilesMatch "^_.*\.php$">
+    Require all denied
+</FilesMatch>
+
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>

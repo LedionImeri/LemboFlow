@@ -1,0 +1,16 @@
+{
+    "name": "lembo/lemboflow",
+    "description": "LemboFlow — invoicing and payments for small businesses.",
+    "type": "project",
+    "license": "proprietary",
+    "require": {
+        "php": ">=8.1",
+        "ext-mbstring": "*",
+        "ext-pdo": "*",
+        "dompdf/dompdf": "^3.0"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true
+    }
+}

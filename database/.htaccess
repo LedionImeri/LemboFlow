@@ -1,0 +1,2 @@
+# Not web-accessible. PHP includes these files from disk.
+Require all denied

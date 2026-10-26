@@ -1,0 +1,23 @@
+# Dependencies (install with `composer install`)
+/vendor/
+
+# Private configuration: database login and API keys live here
+/config/local.php
+.env
+.env.*
+
+# User uploads (keep the folder)
+/uploads/logos/*
+!/uploads/logos/.gitkeep
+
+# Logs, dumps and backups
+*.log
+*.bak
+*.sql.gz
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+.claude/
